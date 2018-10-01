@@ -1,5 +1,5 @@
 angular.module("marvelColector").config(function($routeProvider){
-    $routeProvider.when("/home", {
+    $routeProvider.when("/index", {
         templateUrl:"view/content.html",
         controller: "marvelColectorCtrl"
     });
@@ -7,5 +7,5 @@ angular.module("marvelColector").config(function($routeProvider){
         templateUrl:"view/detalhe.html",
         controller: "marvelDetalheCtrl"
     });
-    $routeProvider.otherwise({redirectTo: "/home"});
+    $routeProvider.otherwise({redirectTo: "/index"});
 });

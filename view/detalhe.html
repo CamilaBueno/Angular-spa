@@ -1,13 +1,17 @@
 
-<table class="table table table-striped">
-        
-        <th>Personagens</th>
-        <th>Descrição</th>
-      
-        <tr ng-repeat="comic in comics">
-                <td ng-src="{{comic.characters.collectionURI}}"></td>
-                <td>{{comic.description}}</td>
-         
-        </tr>
-      </table>
-    
+
+<div class="jumbotron">
+        <h2>Detalhes das Hqs</h2>
+        <table class="table  table-striped">
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Número da coleção</th>
+                <tr>
+                                <td>{{comic.title}}</td>
+                                <td>{{comic.description}}</td>
+                                <td>{{comic.issueNumber}}</td>
+                </tr>
+               
+        </table>
+
+</div>

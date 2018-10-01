@@ -1,0 +1,13 @@
+
+<table class="table table table-striped">
+        
+        <th>Personagens</th>
+        <th>Descrição</th>
+      
+        <tr ng-repeat="comic in comics">
+                <td ng-src="{{comic.characters.collectionURI}}"></td>
+                <td>{{comic.description}}</td>
+         
+        </tr>
+      </table>
+    

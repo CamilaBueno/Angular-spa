@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+}
+h1{
+    justify-content: center;
+    
+}
+.jumbotron{
+    display: table;
+    float: left;
+}
+.img-homem{
+    display: flex;
+   justify-content: center;
+    padding-left: 100px;
+}
+.img-marvel{
+    width: 300px;
+    height: 350px;
+}
+.text-homem{
+    display: table;
+   
+}
+
+
+footer {
+  
+    background-color: #363634;
+    color: aliceblue;
+    width: 100%;
+    height: 200px;
+    
+    
+}

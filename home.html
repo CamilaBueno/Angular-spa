@@ -1,0 +1,69 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Marvel's Colection </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+   
+  <link rel="stylesheet" type="" media="screen" href="/css/app.css">
+  <script src="./lib/angular.js"></script>
+  <script src="./lib/angular-route.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/services/marvelService.js"></script>
+  <script src="./js/controllers/marvelColectorCtrl.js"></script>
+  <script src="./js/controllers/marvelDetalheCtrl.js"></script>
+  <script src="config/routeConfig.js"></script>
+  <script src="lib/angular-md5.js"></script>
+  
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand text-uppercase" href="#">Marvel's Colection</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="#/Home">Home</a>
+            </li>
+            
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<body ng-app="marvelColector">
+  <div ng-view></div>
+
+
+
+  <footer style="height: 100px;" >
+      <div class="icons" style="height: 100px; background-color:gray">
+          <div class="copyright py-4 text-center text-white">
+              <div>
+                <small>Copyright © 2018</small>
+              </div>
+            </div>
+      </div>
+      </footer>
+</body>
+
+
+ 
+
+
+
+
+
+</html>

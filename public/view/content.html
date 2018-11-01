@@ -2,84 +2,64 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand text-uppercase" href="#">Marvel's Colection</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto w-100 justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Minhas coleções</a>
-          </li>
           <nav class="navbar navbar-dark bg-dark">
             <form class="form-inline">
-              <input class="campo-busca form-control mr-sm-2" type="search" id="campo-busca" ng-model="search" placeholder="Procurar HQ"
-                aria-label="Search"/>
-
+              <input class="campo-busca form-control mr-sm-2" type="search" id="campo-busca" ng-model="search"
+                placeholder="Procurar HQ" aria-label="Search" />
               <button class="btn btn-danger my-2 my-sm-0" ng-click="searchComics()" id="btn-busca">Procurar</button>
-
             </form>
           </nav>
-
-
         </ul>
       </div>
     </div>
   </nav>
 </header>
-
-     <div class="jumbotron">
-       <br>
-       <div class="text-marvel">
-       <h1>Marvel</h1>
-       <p>
-          A Marvel Comics teve sua primeira HQ lançada em 1939. 
-          Sua popularização aconteceu no início da década de 1960 com Stan Lee e Jack Kirby criando herói como os X-Men e Homem-Aranha. 
-          Hoje a Marvel Entertainment é parte do grupo Disney, atingindo todas as mídias.
-       </p>
-      </div>
-      <div class="img-homem">
-       <img   width= "300" heigth="400"src="./assets/viuva-negra.jpg" alt="">
-        <img  width= "300" heigth="400"src="./assets/thor.jpg" alt="">
-        <img   width= "300" heigth="400"src="./assets/spider-man.jpg" alt="">
-        <img   width= "300" heigth="400"src="./assets/black-panter.jpg" alt="">
-     
-      </div>
-     </div>
-    
-       
-       <div class="text-homem" >
-        
-        <h1> Novidades no mundo do HQ</h1>
-        <h2> Homem Aranha pede ajuda da Coração de Ferro para solucionar crime</h2>
-          <p>A Panini lançará em breve no Brasil a edição 23 de O Espetacular Homem-Aranha,  
-          publicação que mostrará o herói voltando a ser pobre depois de abrir mão das Indústrias Parker. 
-          Na HQ, ele pede ajuda para Coração de Ferro para solucionar mistério envolvendo o celular que 
-          recuperou de um criminoso. 
-        </p>
-         <img src="./assets/marvel-banner.jpg" alt="">
-        
-       
-     </div>
-     
-    </div>
-    <div ng-if="comics.length > 0">
-      
-      <table class="table table table-striped">
-        <th>Selecione o quadrinho</th>
-        <th>Imagem</th>
-        <th>Título</th>
-        <th>Link</th>
-        <tr ng-repeat="comic in comics">
-            <td><input type="checkbox" ng-model="contato.selecionado"/></td>
-          <td><img class="img-marvel" ng-src="{{comic.thumbnail.path + '.' + comic.thumbnail.extension}}"></td>
-          <td><a href="#/detalhe/{{comic.id}}">{{comic.title}}</a></td>
-          <td><a href="">{{comic.urls[1].url}}</a></td>
-        </tr>
-      </table>
-    </div>
-    <div ng-if="!comics.length > 0">
-      <h2 ng-show="">Sua busca não retornou nenhum quadrinho!</h2>
-    </div>
-  </section>
+<div class="jumbotron">
+  <br>
+  <div class="text-marvel">
+    <h1>Marvel</h1>
+    <p>
+      A Marvel Comics teve sua primeira HQ lançada em 1939.
+      Sua popularização aconteceu no início da década de 1960 com Stan Lee e Jack Kirby criando herói como os X-Men e
+      Homem-Aranha.
+      Hoje a Marvel Entertainment é parte do grupo Disney, atingindo todas as mídias.
+    </p>
+  </div>
+<div >
+  <img src="assets/marvelhq.jpeg" alt="" width="1400">
+</div>
+</div>
+<div class="text-homem">
+  <h1> Novidades no mundo do HQ</h1>
+  <h2> Homem Aranha pede ajuda da Coração de Ferro para solucionar crime</h2>
+  <p>A Panini lançará em breve no Brasil a edição 23 de O Espetacular Homem-Aranha,
+    publicação que mostrará o herói voltando a ser pobre depois de abrir mão das Indústrias Parker.
+    Na HQ, ele pede ajuda para Coração de Ferro para solucionar mistério envolvendo o celular que
+    recuperou de um criminoso.
+  </p>
+  <img src="./assets/marvel-banner.jpg" alt="" width="1600">
+</div>
+</div>
+<div ng-if="comics.length > 0">
+  <table class="table table table-striped">
+    <th>Imagem</th>
+    <th>Título</th>
+    <th>Link</th>
+    <tr ng-repeat="comic in comics">
+      <td><img class="img-marvel" ng-src="{{comic.thumbnail.path + '.' + comic.thumbnail.extension}}"></td>
+      <td><a href="#/detalhe/{{comic.id}}">{{comic.title}}</a></td>
+      <td><a href="">{{comic.urls[1].url}}</a></td>
+    </tr>
+  </table>
+</div>
+<div ng-if="!comics.length > 0">
+  <h2 ng-show="">Sua busca não retornou nenhum quadrinho!</h2>
+</div>
+</section>
 </main>

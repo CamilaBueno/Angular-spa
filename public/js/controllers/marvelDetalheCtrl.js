@@ -4,6 +4,5 @@ angular.module("marvelColector").controller("marvelDetalheCtrl", function ($scop
             $scope.comic = data.data.results[0];
         });
     };
-
     searchComics();
 })

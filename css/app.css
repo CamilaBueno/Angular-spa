@@ -5,33 +5,40 @@ body{
 }
 h1{
     justify-content: center;
-    
+}
+.load{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 0.7;
+    background-color: #fff;
+    z-index: 99;
+    text-align: center;
+
 }
 .jumbotron{
     display: table;
     float: left;
 }
+
 .img-homem{
     display: flex;
-   justify-content: center;
+    justify-content: center;
     padding-left: 100px;
 }
 .img-marvel{
-    width: 300px;
-    height: 350px;
+    width: 30vw;
+    height: 30vw;
 }
 .text-homem{
     display: table;
-   
 }
-
-
 footer {
-  
     background-color: #363634;
     color: aliceblue;
     width: 100%;
     height: 200px;
-    
-    
 }
